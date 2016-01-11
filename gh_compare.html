@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        $.get("/releases.html").done(function(data) {
+          url = "https://github.com/drivy/drivy-rails/compare/" + $('.tag-name', data)[0].innerHTML + "...master";
+          window.location = url;
+        });
+      })
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
